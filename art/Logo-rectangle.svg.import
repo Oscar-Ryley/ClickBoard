@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsbgx01kc36rj"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+uid="uid://ibese7r875am"
+path="res://.godot/imported/Logo-rectangle.svg-8d200bbaef33a5e4945ae2716f2026d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.svg"
-dest_files=["res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"]
+source_file="res://art/Logo-rectangle.svg"
+dest_files=["res://.godot/imported/Logo-rectangle.svg-8d200bbaef33a5e4945ae2716f2026d1.ctex"]
 
 [params]
 

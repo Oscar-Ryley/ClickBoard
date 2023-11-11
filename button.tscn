@@ -1,3 +1,82 @@
-[gd_scene format=3 uid="uid://btaxnmpq04qhc"]
+[gd_scene load_steps=13 format=3 uid="uid://btaxnmpq04qhc"]
 
-[node name="Button" type="Node2D"]
+[ext_resource type="Script" path="res://Global.gd" id="1_byxp8"]
+[ext_resource type="Script" path="res://button.gd" id="1_dov56"]
+[ext_resource type="Texture2D" uid="uid://bt5ayaiqky8tr" path="res://art/Button-unclicked.svg" id="1_l3bn3"]
+[ext_resource type="Texture2D" uid="uid://dkx3besi4oxok" path="res://art/Page.svg" id="1_pqjbw"]
+[ext_resource type="Texture2D" uid="uid://dvdduqupwy65g" path="res://art/Button-clicked.svg" id="2_mmrhe"]
+[ext_resource type="Texture2D" uid="uid://bicdk34rh5dm7" path="res://art/Hinge.svg" id="2_tukct"]
+[ext_resource type="Script" path="res://switch-pages.gd" id="3_0u5ta"]
+[ext_resource type="Texture2D" uid="uid://c31uf723o4a78" path="res://art/Logo-rectangle-line.png" id="3_qggiv"]
+[ext_resource type="Texture2D" uid="uid://e1i7lsggp2rf" path="res://art/Background.svg" id="5_28fwe"]
+[ext_resource type="Script" path="res://clicks-number.gd" id="5_t65d1"]
+[ext_resource type="FontFile" uid="uid://t7myjio8eg4q" path="res://fonts/MouldyCheeseRegular-WyMWG.ttf" id="6_rhvgu"]
+[ext_resource type="Texture2D" uid="uid://ctvvaqxeql7y6" path="res://art/OPage.svg" id="10_j1453"]
+
+[node name="OfficeClicker" type="Node2D"]
+script = ExtResource("1_byxp8")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -922.0
+offset_top = -314.0
+offset_right = 2071.0
+offset_bottom = 1062.0
+rotation = 0.000325306
+scale = Vector2(0.110956, 0.110956)
+pivot_offset = Vector2(1500.03, 317.533)
+texture_normal = ExtResource("2_tukct")
+script = ExtResource("3_0u5ta")
+
+[node name="GamePage" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(597, 365)
+scale = Vector2(0.299546, 0.299546)
+texture = ExtResource("1_pqjbw")
+
+[node name="Logo-rectangle-line" type="Sprite2D" parent="GamePage"]
+position = Vector2(-1695.9, -948.109)
+rotation = -0.196116
+scale = Vector2(0.0518821, 0.0518821)
+texture = ExtResource("3_qggiv")
+
+[node name="BigButton" type="TextureButton" parent="GamePage"]
+offset_left = -1782.7
+offset_top = -807.891
+offset_right = 1207.3
+offset_bottom = 2187.11
+scale = Vector2(0.179974, 0.179974)
+texture_normal = ExtResource("1_l3bn3")
+texture_pressed = ExtResource("2_mmrhe")
+script = ExtResource("1_dov56")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="GamePage"]
+offset_left = -1125.04
+offset_top = -787.859
+offset_right = -1085.04
+offset_bottom = 212.141
+scale = Vector2(0.252079, 0.355595)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rhvgu")
+theme_override_font_sizes/font_size = 1000
+script = ExtResource("5_t65d1")
+
+[node name="OptionsPage" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(579, 352)
+scale = Vector2(0.213737, 0.213737)
+texture = ExtResource("10_j1453")
+
+[node name="Logo-rectangle-line" type="Sprite2D" parent="OptionsPage"]
+position = Vector2(-18.7148, -767.297)
+rotation = 0.00821406
+scale = Vector2(0.20709, 0.20709)
+texture = ExtResource("3_qggiv")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(598, 348)
+scale = Vector2(0.32251, 0.346185)
+texture = ExtResource("5_28fwe")
