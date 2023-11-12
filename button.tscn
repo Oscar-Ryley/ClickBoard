@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://btaxnmpq04qhc"]
+[gd_scene load_steps=26 format=3 uid="uid://btaxnmpq04qhc"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_byxp8"]
 [ext_resource type="Script" path="res://button.gd" id="1_dov56"]
@@ -16,38 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://ctvvaqxeql7y6" path="res://art/OPage.svg" id="10_j1453"]
 [ext_resource type="Texture2D" uid="uid://c1lth3x6u01mj" path="res://art/PageShadow.svg" id="11_61r3p"]
 [ext_resource type="Script" path="res://OptionsPage.gd" id="13_0cu8c"]
-
-[sub_resource type="Animation" id="Animation_cmwlh"]
-resource_name = "Move up"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../OptionsPage:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(579, 1028), Vector2(579, 350)]
-}
-
-[sub_resource type="Animation" id="Animation_cgeag"]
-resource_name = "Move down"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../OptionsPage:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(579, 350), Vector2(579, 1030)]
-}
+[ext_resource type="Script" path="res://Employees.gd" id="16_as8lm"]
+[ext_resource type="Script" path="res://OfficeChairs.gd" id="16_m6o1d"]
+[ext_resource type="Script" path="res://OfficeSupplies.gd" id="16_rh23u"]
+[ext_resource type="Script" path="res://WaterTanks.gd" id="16_uxaef"]
 
 [sub_resource type="Animation" id="Animation_13hbb"]
 resource_name = "Game Move down"
@@ -79,6 +51,38 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(597, 1061), Vector2(597, 365)]
+}
+
+[sub_resource type="Animation" id="Animation_cgeag"]
+resource_name = "Move down"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../OptionsPage:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(579, 350), Vector2(579, 1030)]
+}
+
+[sub_resource type="Animation" id="Animation_cmwlh"]
+resource_name = "Move up"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../OptionsPage:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(579, 1028), Vector2(579, 350)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ihrjt"]
@@ -259,6 +263,7 @@ theme_override_font_sizes/font_size = 500
 text = "Hire a new Employee"
 
 [node name="What1Does" type="Label" parent="GamePage/Upgrade1Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 473.291
 offset_right = 6745.91
@@ -271,6 +276,7 @@ theme_override_font_sizes/font_size = 500
 text = "Automatic clicks per second"
 
 [node name="Num1Upgrades" type="Label" parent="GamePage/Upgrade1Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 793.457
 offset_right = 2711.91
@@ -281,6 +287,18 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Employees:"
+
+[node name="Employees" type="Label" parent="GamePage/Upgrade1Name"]
+offset_left = 1325.51
+offset_top = 812.039
+offset_right = 1365.51
+offset_bottom = 1812.04
+scale = Vector2(0.144696, 0.204116)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rhvgu")
+theme_override_font_sizes/font_size = 1000
+script = ExtResource("16_as8lm")
 
 [node name="Upgrade2Name" type="Label" parent="GamePage"]
 offset_left = 637.631
@@ -295,6 +313,7 @@ theme_override_font_sizes/font_size = 500
 text = "Buy more office supplies"
 
 [node name="What2Does" type="Label" parent="GamePage/Upgrade2Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 473.291
 offset_right = 6745.91
@@ -307,6 +326,7 @@ theme_override_font_sizes/font_size = 500
 text = "More clicks per Employee"
 
 [node name="Num2Upgrades" type="Label" parent="GamePage/Upgrade2Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 793.457
 offset_right = 2711.91
@@ -317,6 +337,18 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Office supplies:"
+
+[node name="OfficeSupplies" type="Label" parent="GamePage/Upgrade2Name"]
+offset_left = 1790.33
+offset_top = 796.594
+offset_right = 1830.33
+offset_bottom = 1796.59
+scale = Vector2(0.144696, 0.204116)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rhvgu")
+theme_override_font_sizes/font_size = 1000
+script = ExtResource("16_rh23u")
 
 [node name="Upgrade3Name" type="Label" parent="GamePage"]
 offset_left = 640.97
@@ -331,6 +363,7 @@ theme_override_font_sizes/font_size = 500
 text = "Buy better office chairs"
 
 [node name="What3Does" type="Label" parent="GamePage/Upgrade3Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 473.291
 offset_right = 6745.91
@@ -343,6 +376,7 @@ theme_override_font_sizes/font_size = 500
 text = "Random click drops are more often"
 
 [node name="Num3Upgrades" type="Label" parent="GamePage/Upgrade3Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 793.457
 offset_right = 2711.91
@@ -354,7 +388,19 @@ theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Office chairs:"
 
-[node name="Upgrade4" type="Label" parent="GamePage"]
+[node name="OfficeChairs" type="Label" parent="GamePage/Upgrade3Name"]
+offset_left = 1599.87
+offset_top = 783.098
+offset_right = 1639.87
+offset_bottom = 1783.1
+scale = Vector2(0.144696, 0.204116)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rhvgu")
+theme_override_font_sizes/font_size = 1000
+script = ExtResource("16_m6o1d")
+
+[node name="Upgrade4Name" type="Label" parent="GamePage"]
 offset_left = 654.323
 offset_top = 644.308
 offset_right = 6752.32
@@ -366,7 +412,8 @@ theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Refresh the water cooler"
 
-[node name="What4Does" type="Label" parent="GamePage/Upgrade4"]
+[node name="What4Does" type="Label" parent="GamePage/Upgrade4Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 473.291
 offset_right = 6745.91
@@ -376,9 +423,10 @@ theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
-text = "Random click drops drop more clicks"
+text = "More clicks per button click"
 
-[node name="Num4Upgrades" type="Label" parent="GamePage/Upgrade4"]
+[node name="Num4Upgrades" type="Label" parent="GamePage/Upgrade4Name"]
+layout_mode = 0
 offset_left = 58.9121
 offset_top = 793.457
 offset_right = 2711.91
@@ -390,11 +438,23 @@ theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Water tanks:"
 
+[node name="WaterTanks" type="Label" parent="GamePage/Upgrade4Name"]
+offset_left = 1523.68
+offset_top = 810.099
+offset_right = 1563.68
+offset_bottom = 1810.1
+scale = Vector2(0.144696, 0.204116)
+theme_override_colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rhvgu")
+theme_override_font_sizes/font_size = 1000
+script = ExtResource("16_uxaef")
+
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -5
 position = Vector2(598, 348)
 scale = Vector2(0.32251, 0.346185)
 texture = ExtResource("5_28fwe")
 
-[connection signal="pressed" from="Hinge" to="GamePage" method="_on_hinge_pressed"]
 [connection signal="pressed" from="Hinge" to="OptionsPage" method="_on_hinge_pressed"]
+[connection signal="pressed" from="Hinge" to="GamePage" method="_on_hinge_pressed"]

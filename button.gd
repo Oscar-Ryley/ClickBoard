@@ -4,4 +4,4 @@ func _ready():
 	self.pressed.connect(self._button_pressed)
 
 func _button_pressed():
-	Global.clicks += 1
+	Global.clicks += Global.tanks
