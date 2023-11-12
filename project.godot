@@ -23,3 +23,4 @@ Global="*res://Global.gd"
 
 window/size/viewport_width=1200
 window/size/viewport_height=700
+window/size/resizable=false
