@@ -1,4 +1,4 @@
 extends Label
 
 func _process(delta):
-	self.text = str(Global.supgrade)
+	self.text = str(Global.cupgrade)
