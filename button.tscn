@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://btaxnmpq04qhc"]
+[gd_scene load_steps=39 format=3 uid="uid://btaxnmpq04qhc"]
 
 [ext_resource type="Script" path="res://Global.gd" id="1_byxp8"]
 [ext_resource type="Script" path="res://button.gd" id="1_dov56"]
@@ -22,6 +22,8 @@
 [ext_resource type="Script" path="res://OfficeSupplies.gd" id="16_rh23u"]
 [ext_resource type="Script" path="res://WaterTanks.gd" id="16_uxaef"]
 [ext_resource type="Texture2D" uid="uid://b0syldhvbh05o" path="res://art/UpButton-unclicked.svg" id="17_1hh7w"]
+[ext_resource type="Script" path="res://UpgradesTitle.gd" id="17_3pr2p"]
+[ext_resource type="Script" path="res://Cost.gd" id="17_5d4m0"]
 [ext_resource type="Texture2D" uid="uid://lfaep3a33frv" path="res://art/UpButton-clicked.svg" id="18_2kyyj"]
 [ext_resource type="Script" path="res://Up1Button.gd" id="19_pjrp5"]
 [ext_resource type="Script" path="res://Up1Cost.gd" id="20_r6vjs"]
@@ -272,6 +274,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Upgrades"
+script = ExtResource("17_3pr2p")
 
 [node name="Cost" type="Label" parent="GamePage/UpgradesTitle"]
 layout_mode = 0
@@ -285,6 +288,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_rhvgu")
 theme_override_font_sizes/font_size = 500
 text = "Cost"
+script = ExtResource("17_5d4m0")
 
 [node name="Upgrade1" type="Label" parent="GamePage"]
 offset_left = 640.97

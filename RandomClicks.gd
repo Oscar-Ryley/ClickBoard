@@ -14,7 +14,7 @@ func _process(delta):
 		self.visible = false
 	if timerCurrent >= timerTotal:
 		self.visible = true 
-		self.text = str("+", Global.chairs)
-		Global.clicks += Global.chairs
+		self.text = str("+", Global.chairs *10)
+		Global.clicks += Global.chairs * 10
 		timerCurrent -= timerTotal
 		timerTotal = rng.randi_range(5, 40)
