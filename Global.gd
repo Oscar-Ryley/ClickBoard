@@ -9,4 +9,3 @@ var chairs = 0
 var cupgrade = 65
 var tanks = 1
 var tupgrade = 30
-

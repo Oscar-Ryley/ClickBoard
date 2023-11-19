@@ -7,4 +7,4 @@ func _button_pressed():
 	if Global.clicks >= Global.eupgrade:
 		Global.employees += 1
 		Global.clicks -= Global.eupgrade
-		Global.eupgrade = int(Global.eupgrade * 1.35)
+		Global.eupgrade = int(Global.eupgrade * 1.2)

@@ -7,4 +7,4 @@ func _button_pressed():
 	if Global.clicks >= Global.cupgrade:
 		Global.chairs += 1
 		Global.clicks -= Global.cupgrade
-		Global.cupgrade = int(Global.cupgrade * 1.35)
+		Global.cupgrade = int(Global.cupgrade * 1.2)
