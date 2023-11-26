@@ -1,6 +1,6 @@
 extends Node
 
-var clicks = 10000
+var clicks = 0
 var employees = 0
 var eupgrade = 115
 var supplies = 0
