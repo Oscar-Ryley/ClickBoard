@@ -8,4 +8,3 @@ func _on_hinge_pressed():
 	else:
 		$GamePageAnim.play("Game Move up")
 		ga_up = true
-	

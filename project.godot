@@ -18,6 +18,7 @@ config/icon="res://art/Logo-square.png"
 [autoload]
 
 Global="*res://Global.gd"
+Employee="*res://Employee.tscn"
 
 [display]
 
