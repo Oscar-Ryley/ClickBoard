@@ -10,12 +10,16 @@ var cupgrade = 65
 var tanks = 1
 var tupgrade = 30
 
-@export var spawn_object = preload("res://Employee.tscn")
 var previous = 0
+
+@onready var spawn_object = preload("res://Employee.tscn")
 
 func _process(delta):
 	if Global.employees != previous:
-		var obj = spawn_object.instantiate()
-		obj.position = Vector2(200, -200)
-		self.add_child(obj)
-		previous = Global.employees
+		create(Vector2(300, -200))
+	previous = Global.employees
+
+func create(pos):
+	var obj = spawn_object.instantiate()
+	obj.position = pos
+	self.add_child(obj)

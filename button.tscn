@@ -1,6 +1,5 @@
-[gd_scene load_steps=47 format=3 uid="uid://c0acufhabce8r"]
+[gd_scene load_steps=46 format=3 uid="uid://c7bxolnd7x4ra"]
 
-[ext_resource type="Script" path="res://Global.gd" id="1_byxp8"]
 [ext_resource type="Script" path="res://button.gd" id="1_dov56"]
 [ext_resource type="Texture2D" uid="uid://bt5ayaiqky8tr" path="res://art/Button-unclicked.svg" id="1_l3bn3"]
 [ext_resource type="Texture2D" uid="uid://dkx3besi4oxok" path="res://art/Page.svg" id="1_pqjbw"]
@@ -117,7 +116,6 @@ _data = {
 size = Vector2(6166.84, 2067.42)
 
 [node name="ClickBoard" type="Node2D"]
-script = ExtResource("1_byxp8")
 
 [node name="Hinge" type="TextureButton" parent="."]
 z_index = 2
@@ -597,12 +595,10 @@ theme_override_font_sizes/font_size = 1000
 script = ExtResource("29_fk718")
 
 [node name="Node2D" type="Node2D" parent="GamePage"]
-scale = Vector2(1, 1)
 
 [node name="EmployeeCage" type="StaticBody2D" parent="GamePage/Node2D"]
 z_index = 5
 position = Vector2(-841.273, 66.7677)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="GamePage/Node2D/EmployeeCage"]
 position = Vector2(-43.3992, 1899.54)
