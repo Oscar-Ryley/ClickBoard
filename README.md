@@ -9,3 +9,5 @@ Click the hinge of the clipboard to switch to the page with the options screen o
 - Buy more Office Supplies to increase the number of clicks per Employee
 - Buy more Office chairs to increase the number of clicks per random click drop
 - Buy more water tanks to increase the number of clicks per click of the button
+
+Copyright © 2023 Oscar Ryley. All rights reserved
